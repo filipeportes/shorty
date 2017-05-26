@@ -21,7 +21,7 @@ public class ShortyController {
         return "index.html";
     }
 
-    @RequestMapping(value = "/{hash}", method = RequestMethod.GET)
+    @RequestMapping(value = "/shorty/{hash}", method = RequestMethod.GET)
     public void redirectToUrl(@PathVariable String hash, HttpServletResponse resp) throws Exception {
         final ShortUrl shortUrl = repository.findByHash(hash);
         System.out.println(shortUrl);

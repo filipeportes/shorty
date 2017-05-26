@@ -18,9 +18,8 @@ class App extends React.Component {
             .then(
                 res => {
                     let location = res.headers.get('Location');
-                    console.log(location);
                     this.setState({
-                        shorty: location.replace("api/shortUrls/", ""),
+                        shorty: location.replace("api/shortUrls/", "shorty/"),
                     });
                 }
             )
